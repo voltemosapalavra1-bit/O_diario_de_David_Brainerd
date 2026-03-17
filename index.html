@@ -472,6 +472,88 @@
     letter-spacing: 0.1em;
   }
 
+  /* ── EDITIONS GRID ── */
+  .editions-grid {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0;
+    margin: 0 auto 48px;
+    flex-wrap: wrap;
+    position: relative;
+  }
+
+  .edition-box {
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(184,146,42,0.25);
+    padding: 36px 48px;
+    text-align: center;
+    min-width: 260px;
+    flex: 1;
+    max-width: 340px;
+  }
+
+  .edition-box:first-child {
+    border-right: none;
+  }
+
+  .edition-label {
+    font-size: 0.78rem;
+    letter-spacing: 0.35em;
+    text-transform: uppercase;
+    color: rgba(245,237,224,0.5);
+    margin: 0 0 16px !important;
+  }
+
+  .edition-label--gold {
+    color: var(--gold-light) !important;
+  }
+
+  .edition-divider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    position: relative;
+    z-index: 2;
+  }
+
+  .edition-divider span {
+    background: var(--ink);
+    color: rgba(245,237,224,0.35);
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 1.2rem;
+    padding: 8px 0;
+  }
+
+  .btn-secondary {
+    display: inline-block;
+    background: transparent;
+    color: var(--gold-light);
+    padding: 18px 40px;
+    font-family: 'EB Garamond', serif;
+    font-size: 1.05rem;
+    letter-spacing: 0.08em;
+    text-decoration: none;
+    text-transform: uppercase;
+    border: 1px solid var(--gold);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+  }
+
+  .btn-secondary:hover {
+    background: rgba(184,146,42,0.12);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 30px rgba(184,146,42,0.2);
+  }
+
+  @media (max-width: 680px) {
+    .edition-box:first-child { border-right: 1px solid rgba(184,146,42,0.25); border-bottom: none; }
+    .edition-divider { width: 100%; height: 40px; }
+  }
+
   /* ── PRICE BOX ── */
   .price-box {
     background: rgba(255,255,255,0.05);
@@ -572,7 +654,7 @@
   </div>
 
   <div class="hero-cta">
-    <a href="https://pay.kiwify.com.br/VcyJxDD" class="btn-primary">Quero Este Livro</a>
+    <a href="https://pay.hotmart.com/R104905482B" class="btn-primary">Quero Este Livro</a>
   </div>
   <div class="hero-scroll">↓</div>
 </section>
@@ -801,13 +883,32 @@
   <h2>Pronto para ser desafiado por uma vida que mudou o mundo?</h2>
   <p>Junte-se a séculos de leitores que foram transformados por estas páginas.</p>
 
-  <div class="price-box">
-    <p class="price-from">De <span>R$ 30,00</span></p>
-    <p class="price-main">Por apenas <strong>R$ 12,90</strong></p>
-    <p class="price-formats">📄 PDF &nbsp;+&nbsp; 📖 EPUB &nbsp;·&nbsp; Acesso imediato após a compra</p>
-  </div>
+  <div class="editions-grid">
 
-  <a href="https://pay.kiwify.com.br/VcyJxDD" class="btn-primary">Quero Este Livro Agora →</a>
+    <!-- DIGITAL -->
+    <div class="edition-box">
+      <p class="edition-label">Edição Digital</p>
+      <p class="price-from">De <span>R$ 30,00</span></p>
+      <p class="price-main">Por apenas <strong>R$ 15,00</strong></p>
+      <p class="price-formats">📄 PDF &nbsp;+&nbsp; 📖 EPUB &nbsp;·&nbsp; Acesso imediato</p>
+      <a href="https://pay.hotmart.com/R104905482B" class="btn-primary" style="margin-top:28px;">Quero o Digital →</a>
+    </div>
+
+    <!-- DIVIDER -->
+    <div class="edition-divider">
+      <span>ou</span>
+    </div>
+
+    <!-- FÍSICO -->
+    <div class="edition-box">
+      <p class="edition-label edition-label--gold">Edição Impressa</p>
+      <p class="price-from">&nbsp;</p>
+      <p class="price-main"><strong>R$ 59,90</strong></p>
+      <p class="price-formats">📦 Livro físico &nbsp;·&nbsp; Impresso e enviado para você</p>
+      <a href="https://pay.hotmart.com/W104939846A" class="btn-secondary" style="margin-top:28px;">Quero o Impresso →</a>
+    </div>
+
+  </div>
   <p class="price-note">Oferta por tempo limitado · Pagamento 100% seguro</p>
 </section>
 
